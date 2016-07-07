@@ -29,15 +29,15 @@ public class DiceTest extends TestCase {
 		FraudDice f = new FraudDice("other");
 		
 		val = d.getValue();
-		assertEquals("[STRONG]", d.getType());
+		assertEquals("STRONG", Dice.typeToString(d.getType()));
 		assertTrue("While losing, the FraudDice should return value above 2", val>2);
 		
 		val = e.getValue();
-		assertEquals("[WEAK]", e.getType());
+		assertEquals("WEAK", Dice.typeToString(e.getType()));
 		assertTrue("While winning, the FraudDice should return value under 5", val<5);
 		
 		val = f.getValue();
-		assertEquals("[NORMAL]", f.getType());
+		assertEquals("NORMAL", Dice.typeToString(f.getType()));
 		assertTrue("On other situations, the dice should be a normal dice", val>=1 && val<=6);
 	}
 	

@@ -1,3 +1,4 @@
+import Dices.Dice;
 import Player.Player;
 import Player.FraudPlayer;
 import junit.framework.TestCase;
@@ -17,8 +18,8 @@ public class PlayerTest extends TestCase {
 		assertEquals(0, score);
 		
 		//check the correct dice is assigned to each player.
-		assertEquals(a.getDice().getType(), "");
-		assertEquals(b.getDice().getType(), "[NORMAL]");
+		assertEquals(Dice.typeToString(a.getDice().getType()), "");
+		assertEquals(Dice.typeToString(b.getDice().getType()), "NORMAL");
 	}
 	
 }

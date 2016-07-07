@@ -21,7 +21,7 @@ import java.io.PrintStream;
 
 public class GUIPractice extends JFrame{
 	/**
-	 * 
+	 * GUI를 연습하기 위해 만든 클래스입니다. 실험중입니다.
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final int WIDTH = 400;
@@ -93,7 +93,7 @@ public class GUIPractice extends JFrame{
 			Player p1 = new FraudPlayer();
 			Player p2 = new Player();
 			
-			/*if (mode1TF.getText() == "normal"){
+			if (mode1TF.getText() == "normal"){
 			} else {
 				p1 = new FraudPlayer();
 			}
@@ -101,7 +101,7 @@ public class GUIPractice extends JFrame{
 			if (mode2TF.getText() == "normal"){
 			} else {
 				p2 = new FraudPlayer();
-			}*/
+			}
 			
 			p1.setName(name1TF.getText());
 			p2.setName(name2TF.getText());
