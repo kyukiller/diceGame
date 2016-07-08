@@ -23,10 +23,10 @@ public class Recorder {
 		p2 = player2;
 	}
 	
+	/*
+	 * 선수들 중 누가 FraudPlayer인지를 whoFraud 변수에 저장하기 위한 메소드입니다.
+	 */
 	public void determineFraudPlayer(){
-		/*
-		 * 선수들 중 누가 FraudPlayer인지를 whoFraud 변수에 저장하기 위한 메소드입니다.
-		 */
 		if (p1 instanceof FraudPlayer && p2 instanceof FraudPlayer){
 			whoFraud = WhoFraud.BOTH;
 		} else if(p1 instanceof FraudPlayer){
@@ -38,10 +38,10 @@ public class Recorder {
 		}
 	}
 	
+	/*
+	 * 각 상황에 맞는 문장을 출력합니다. 보통 플레이어는 괄호가 필요 없기 때문에 switch...case로 작성하여 네 가지 상황에 맞게 만들어 봤습니다.
+	 */
 	public void record(){
-		/*
-		 * 각 상황에 맞는 문장을 출력합니다. 보통 플레이어는 괄호가 필요 없기 때문에 switch...case로 작성하여 네 가지 상황에 맞게 만들어 봤습니다.
-		 */
 		determineFraudPlayer();
 		switch(whoFraud){
 		case BOTH:
@@ -63,12 +63,10 @@ public class Recorder {
 		}
 	}
 	
-
-	
+	/*
+	 * 모든 라운드가 끝났을 때 호출될 메소드 입니다. 최종 점수를 가지고 승자를 판단합니다.
+	 */
 	public void result(){
-		/*
-		 * 모든 라운드가 끝났을 때 호출될 메소드 입니다. 최종 점수를 가지고 승자를 판단합니다.
-		 */
 		if (p1.getScore()>p2.getScore()){
 			System.out.println(p1.getName()+"가 승리했습니다!");
 		} else if (p2.getScore()>p1.getScore()){

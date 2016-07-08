@@ -44,10 +44,10 @@ public class Player {
 		return myDice;
 	}
 	
+	/*
+	 * 새로운 주사위 값을 얻기 위해 상황에 맞는 주사위를 던지는 메소드입니다.
+	 */
 	public void changeDice(){
-		/*
-		 * 새로운 주사위 값을 얻기 위해 상황에 맞는 주사위를 던지는 메소드입니다.
-		 */
 		if (score-opponentScore>=6 && myDice instanceof FraudDice){
 			myDice = new FraudDice("winning");
 		} else if (score<opponentScore && myDice instanceof FraudDice){
